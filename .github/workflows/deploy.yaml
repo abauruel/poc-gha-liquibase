@@ -12,10 +12,8 @@ jobs:
     - name: 'Liquibase Status'
       uses: liquibase-github-actions/status@v4.29.1
       with:
-        defaults-file: "./liquibase/changelog/liquibase.atlas.properties"
-        
-
-
-
-
-      
+        defaultsFile: "./liquibase/changelog/liquibase.atlas.properties"
+        searchPath: "./liquibase/changelog"
+        url: "mongodb://localhost:27017/liquibase_learn"
+        changelogFile: "changelog.xml"
+        classpath: "./liquibase/changelog/bson-5.1.2.jar:./liquibase/changelog/liquibase-mongodb-4.28.0.jar:./liquibase/changelog/mongodb-driver-core-5.1.2.jar:./liquibase/changelog/mongodb-driver-sync-5.1.2.jar"     
