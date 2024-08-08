@@ -12,7 +12,7 @@ jobs:
     - name: 'Liquibase Status'
       uses: liquibase-github-actions/status@v4.29.1
       with:
-        defaultsFile: ./liquibase/changelog/liquibase.atlas.properties
+        defaultsFile: "./liquibase/changelog/liquibase.atlas.properties"
 
 
 
